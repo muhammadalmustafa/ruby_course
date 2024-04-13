@@ -13,7 +13,7 @@ end
   formatted_number = format('%02d', chapter_number)
   get "/chapter#{formatted_number}" do
   	puts "chapter formatted number #{formatted_number}"
-    file_path = "chapters/chapter_0#{chapter_number}.md"
+    file_path = "chapters/chapter_#{chapter_number}.md"
     markdown.render(File.read(file_path))
   end
 end
